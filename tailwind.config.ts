@@ -52,12 +52,6 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				},
-				void: {
-					DEFAULT: '#1A1F2C',
-					light: '#9b87f5',
-					purple: '#7E69AB',
-					accent: '#E5DEFF'
 				}
 			},
 			borderRadius: {
@@ -76,7 +70,7 @@ export default {
 				},
 				"float": {
 					"0%, 100%": { transform: "translateY(0)" },
-					"50%": { transform: "translateY(-20px)" },
+					"50%": { transform: "translateY(-15px)" },
 				},
 				"pulse-soft": {
 					"0%, 100%": { opacity: "1" },
@@ -98,6 +92,14 @@ export default {
 				"shimmer": {
 					"0%": { backgroundPosition: "-500px 0" },
 					"100%": { backgroundPosition: "500px 0" },
+				},
+				"typing": {
+					"from": { width: "0" },
+					"to": { width: "100%" }
+				},
+				"blink-caret": {
+					"from, to": { borderColor: "transparent" },
+					"50%": { borderColor: "white" }
 				}
 			},
 			animation: {
@@ -108,11 +110,13 @@ export default {
 				"text-reveal": "text-reveal 1.5s ease-out forwards",
 				"fade-in": "fade-in 1s ease-out forwards",
 				"particles-move": "particles-move 8s ease-in-out infinite",
-				"shimmer": "shimmer 3s linear infinite"
+				"shimmer": "shimmer 3s linear infinite",
+				"typing": "typing 3.5s steps(40, end)",
+				"blink-caret": "blink-caret 0.75s step-end infinite"
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'shimmer': 'linear-gradient(to right, transparent 0%, rgba(155, 135, 245, 0.2) 20%, rgba(155, 135, 245, 0.3) 40%, transparent 100%)',
+				'shimmer': 'linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 40%, transparent 100%)',
 			}
 		}
 	},
